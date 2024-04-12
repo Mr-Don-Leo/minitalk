@@ -1,0 +1,42 @@
+write: This function is used to write data to a file or a file descriptor.
+       It takes three arguments: the file descriptor, a pointer to the buffer
+       from where the data is to be written, and the number of bytes to be written.
+
+sigemptyset: This function initializes a signal set to be empty. It's used when we
+       want to block certain signals from interrupting a process.
+
+sigaddset: This function adds a specific signal to a signal set.
+       It's used to specify which signals we want to block.
+
+sigaction: This function allows the calling process to examine
+       and/or specify the action to be associated with a specific signal.
+       Essentially, it's used to handle signals sent to a process.
+
+kill:  This function sends a signal to a process or a group of processes.
+       It's often used to terminate processes.
+
+getpid: This function returns the process ID of the current process.
+        It's often used when creating unique temporary files, or for debugging.
+
+malloc: This function allocates a block of memory of specified size and returns a
+        pointer to the beginning of the block. The memory is not initialized.
+
+free: This function deallocates the block of memory that was previously allocated by
+      malloc, calloc, realloc, etc. The argument to free should be a pointer that was
+      returned by malloc or one of its related functions.
+
+pause: This function causes the calling process to sleep until a signal is received that
+       either terminates the process or causes the invocation of a signal-catching function.
+
+sleep: This function suspends 21execution of the calling process for (at least) the number of
+       seconds specified via the argument.
+
+usleep: This function suspends execution of the calling thread for (at least) the number of
+        microseconds specified by the argument.
+
+exit: This function terminates the calling process and returns the exit status to the operating system.
+
+In your case, SIGUSR1 refers to a signal in C++ that can be used to communicate between processes. 
+Signals are a way for processes to send notifications or interrupt each other.
+
+
