@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   client_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbabayan <mbabayan@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 12:23:58 by mbabayan          #+#    #+#             */
-/*   Updated: 2024/04/12 17:01:26 by mbabayan         ###   ########.fr       */
+/*   Updated: 2024/04/12 17:01:25 by mbabayan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#include "minitalk_bonus.h"
 
 /// @brief Checks the arguments.
 /// @details Checks if the number of arguments is valid, if the PID is valid,
