@@ -6,7 +6,7 @@
 /*   By: mbabayan <mbabayan@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 12:23:58 by mbabayan          #+#    #+#             */
-/*   Updated: 2024/04/12 17:01:26 by mbabayan         ###   ########.fr       */
+/*   Updated: 2024/05/03 13:19:47 by mbabayan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,17 +57,24 @@ int argument_check(int argc, char **argv)
 void send_char(int pid, char c)
 {
 	int i;
+	int check;
 
+	check = 0;
 	i = 0;
 	while (i < 8)
 	{
 		if (c & 1)
-			kill(pid, SIGUSR1);
+			check = kill(pid, SIGUSR1);
 		else
-			kill(pid, SIGUSR2);
+			check = kill(pid, SIGUSR2);
 		c >>= 1;
 		usleep(100);
 		i++;
+		if (check == -1)
+		{
+			ft_putstr_fd("\nError: Invalid PID\n", 2);
+			exit(1);
+		}
 	}
 }
 
